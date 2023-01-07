@@ -94,6 +94,7 @@ def read():
                 i['conversation']['peer']['id'],
                 i['last_message']['text'],
                 [max_size(j['photo']) for j in i['last_message']['attachments'] if j['type'] == 'photo'] if 'attachments' in i['last_message'] else [],
+                i['last_message']['date'],
             ))
     return messages
 
