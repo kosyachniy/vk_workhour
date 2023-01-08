@@ -6,7 +6,7 @@ from libdev.cfg import cfg
 from lib.vk import read, send, info
 
 
-tzinfo=datetime.timezone(datetime.timedelta(hours=cfg('tz')))
+tzinfo=datetime.timezone(datetime.timedelta(hours=cfg('tz', 3)))
 
 while True:
     timestamp = time.time()
